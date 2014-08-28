@@ -25,7 +25,7 @@
         </div>
     </div>
     <div class="footer left">
-        &copy; 2014 <a href="http://den.bz">www.den.bz</a>
+        &copy; 2014 <a href="http://den.bz/program/generator-zapominayushhikhsya-parolejj.html">www.den.bz</a>
     </div>
     <div class="footer right">
         <div id="options">
