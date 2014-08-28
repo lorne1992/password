@@ -11,9 +11,10 @@ function getRandomInt(min, max)
 
 /**
  * Возвращает псевдослучайный слог
+ * @param {bool} noRepeat отключить ли повтор слога
  * @returns {string}
  */
-function getRandomSyllable()
+function getRandomSyllable(noRepeat)
 {
     var result = consonants[getRandomInt(0, consonants.length - 1)].toUpperCase();
 
@@ -21,6 +22,10 @@ function getRandomSyllable()
     //то следует исключить генерацию слога Yy
     result += vowels[getRandomInt(0, vowels.length - ((result.toLowerCase() == 'y') ? 2 : 1))];
 
+    if (!noRepeat) {
+        result += result.toLowerCase();
+    }
+    
     return result;
 }
 
@@ -104,9 +109,9 @@ function getDivider(password, denySymbols)
 /**
  * Возвращает сгенерированный пароль
  * @param {bool} denySymbols исключать ли символы из массива symbols
+ * @param {bool} noRepeatSyllable отключить ли повтор слогов
  * @returns {string}
- */
-function generate(denySymbols)
+ */function generate(denySymbols, noRepeatSyllable)
 {
     var result = '';
     var haveWord = false;
@@ -134,7 +139,7 @@ function generate(denySymbols)
                 break;
             case 2:
                 lastWasMirror = false;
-                last = (syllableCount < MAX_SYLLABLE) ? getRandomSyllable() : getRandomSequence();
+                last = (syllableCount < MAX_SYLLABLE) ? getRandomSyllable(noRepeatSyllable) : getRandomSequence();
                 syllableCount++;
                 break;
             case 3:

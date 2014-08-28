@@ -5,7 +5,7 @@ function updatePasswordAtPage()
 {
     var password;
     do {
-        password = generate($('#symbolsOption').prop('checked'));
+        password = generate($('#symbolsOption').prop('checked'), $('#noRepeatSyllableOption').prop('checked'));
     } while (!isSafePassword(password));
 
     $('#passwordInput').val(password);
@@ -17,6 +17,9 @@ $(function() {
     $('.row').fadeIn(400);
     if (getCookie('symbols') == 1) {
         $('#symbolsOption').prop('checked', true);
+    }
+    if (getCookie('no_repeat_syllable') == 1) {
+        $('#noRepeatSyllableOption').prop('checked', true);
     }
 })
 
@@ -32,7 +35,12 @@ $('#moreButton').on('click', function() {
 })
 
 $('#symbolsOption').on('change', function() {
-    setCookie('symbols', $(this).prop('checked') ? 1 : 0, 90, '/');
+    setCookie('no_symbols', $(this).prop('checked') ? 1 : 0, 90, '/');
+    return false;
+})
+
+$('#noRepeatSyllableOption').on('change', function() {
+    setCookie('no_repeat_syllable', $(this).prop('checked') ? 1 : 0, 90, '/');
     return false;
 })
 

@@ -37,7 +37,8 @@
     </div>
     <div class="footer right">
         <div id="options">
-            <input type="checkbox" id="symbolsOption" value="1"> Без символов &laquo;-_!&raquo;
+            <input type="checkbox" id="symbolsOption" value="1"> Без символов &laquo;-_!&raquo;<br>
+            <input type="checkbox" id="noRepeatSyllableOption" value="1"> Не повторять слоги
         </div>
         <i class="fa fa-cog"></i> <a href="#" id="optionsLink">опции</a>
         <i class="fa fa-git-square"></i> <a href="https://github.com/maindefine/simplepassword.ru" target="_blank">исходники</a>
