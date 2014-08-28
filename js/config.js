@@ -5,9 +5,12 @@ var alphabet = [
 var consonants = ['b', 'c', 'd', 'q', 'w', 'r', 't'];
 var vowels = ['a', 'e', 'i', 'u'];
 var numbers = [1, 2, 3, 4, 5];
-var words = ['the', 'and', 'look', 'head', 'room', 'door', 'one', 'two', 'time'];
-var symbols = ['!', '-'];
+var words = [
+    'the', 'and', 'look', 'head', 'room', 'door', 'one', 'two', 'time',
+    'body', 'over', 'code', 'more', 'some'
+];
+var symbols = ['!', '-', ''];
 
-const MIN_LENGTH_SEQUENCE = 2;
-const MAX_LENGTH_SEQUENCE = 3;
-const ITERATIONS = 3;
+const MIN_LENGTH_SEQUENCE = 3;
+const MAX_LENGTH_SEQUENCE = 5;
+const MAX_SYLLABLE = 1;

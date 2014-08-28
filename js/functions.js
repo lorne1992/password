@@ -10,22 +10,13 @@ function getRandomInt(min, max)
 }
 
 /**
- * Возвращает псевдослучайный слог (в конец слога может добавить число или символ)
+ * Возвращает псевдослучайный слог
  * @returns {string}
  */
 function getRandomSyllable()
 {
     var result = consonants[getRandomInt(0, consonants.length - 1)].toUpperCase();
     result += vowels[getRandomInt(0, vowels.length - 1)];
-
-    switch (getRandomInt(0, 2)) {
-        case 1:
-            result += symbols[getRandomInt(0, symbols.length - 1)];
-            break;
-        case 2:
-            result += numbers[getRandomInt(0, numbers.length - 1)];
-            break;
-    }
 
     return result;
 }
@@ -37,7 +28,7 @@ function getRandomSyllable()
  */
 function getMirror(str)
 {
-    var result = '';
+    var result = symbols[getRandomInt(0, symbols.length - 1)];
     for (var i = str.length - 1; i >= 0; i--) {
         result += str[i];
     }
@@ -70,8 +61,8 @@ function getRandomSequence()
 }
 
 /**
- * Возвращает случайное значение из массива words
- * (в конец возвращаемого значения может добавить число или символ)
+ * Возвращает псевдослучайное значение из массива words,
+ * добавляя в конец возвращаемого значения псевдослучайный символ (из symbols массива)
  * @returns {string}
  */
 function getRandomWord()
@@ -82,14 +73,9 @@ function getRandomWord()
             word = word.substring(0,i) + word.charAt(i).toUpperCase() + word.substring(i+1);
         }
     }
-    switch (getRandomInt(0, 2)) {
-        case 1:
-            word += symbols[getRandomInt(0, symbols.length - 1)];
-            break;
-        case 2:
-            word += numbers[getRandomInt(0, numbers.length - 1)];
-            break;
-    }
+
+    word += symbols[getRandomInt(0, symbols.length - 1)];
+
     return word;
 }
 
@@ -104,12 +90,13 @@ function generate()
     var lastWasMirror = false;
     var last = '';
     var rand;
+    var syllableCount = 0;
 
-    for (var i = 0; i < ITERATIONS; i++) {
+    while (result.length < 8) {
         if (!haveWord) {
-            rand = getRandomInt(0, (i == 0) ? 2 : (lastWasMirror) ? 2 : 3);
+            rand = getRandomInt(0, (result.length == 0) ? 2 : (lastWasMirror) ? 2 : 3);
         } else {
-            rand = getRandomInt(1, (i == 0) ? 2 : (lastWasMirror) ? 2 : 3);
+            rand = getRandomInt(1, (result.length == 0) ? 2 : (lastWasMirror) ? 2 : 3);
         }
 
         switch (rand) {
@@ -124,7 +111,8 @@ function generate()
                 break;
             case 2:
                 lastWasMirror = false;
-                last = getRandomSyllable();
+                last = (syllableCount < MAX_SYLLABLE) ? getRandomSyllable() : getRandomSequence();
+                syllableCount++;
                 break;
             case 3:
                 lastWasMirror = true;
