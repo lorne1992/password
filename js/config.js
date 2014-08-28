@@ -9,7 +9,7 @@ var words = [
     'the', 'and', 'look', 'head', 'room', 'door', 'one', 'two', 'time',
     'body', 'over', 'code', 'more', 'some'
 ];
-var symbols = ['!', '-'];
+var symbols = ['!', '-', '_'];
 
 const MIN_LENGTH_SEQUENCE = 3;
 const MAX_LENGTH_SEQUENCE = 5;
