@@ -32,5 +32,6 @@
     <script src="js/config.js"></script>
     <script src="js/functions.js"></script>
     <script src="js/actions.js"></script>
+    <?php include(__DIR__.'/inc/counters.php'); ?>
 </body>
 </html>
