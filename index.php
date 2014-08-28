@@ -5,7 +5,6 @@
     <title>Генератор паролей, которые легко запомнить!</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href='http://fonts.googleapis.com/css?family=PT+Sans+Caption' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Tienne' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css" />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
