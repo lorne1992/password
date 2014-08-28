@@ -43,7 +43,7 @@ body {
     #map {
         margin-top: 10px;
     }
-    #footer {
+    .footer {
         position: relative;
         top: auto;
         left: auto;
@@ -91,21 +91,26 @@ body {
     border-bottom-right-radius: 0;
 }
 
-#footer {
+.footer {
     position: absolute;
     top: 100%;
     margin-top: -2.5em;
     margin-left: 1.5em;
     font-size: 1.3em;
-    color: #555;
+    color: #999;
 }
 
-#footer a {
-    color: #555;
+.footer a {
+    color: #999;
     font-size: 1em;
+    text-decoration: underline;
 }
 
-#footer a:hover {
-    text-decoration: underline;
+.footer a:hover {
     color: #333;
+}
+
+.footer.right {
+    left: 100%;
+    margin-left: -7.5em;
 }
