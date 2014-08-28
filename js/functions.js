@@ -22,13 +22,19 @@ function getRandomSyllable()
 }
 
 /**
- * Возвращает зеркальное отражение строки
+ * Возвращает зеркальное отражение строки,
+ * добавляя (если разрешено) перед этим псевдослучайный символ из массива symbols
  * @param {string} str
+ * @param {bool} denySymbols исключать ли символы из массива symbols
  * @returns {string}
  */
-function getMirror(str)
+function getMirror(str, denySymbols)
 {
-    var result = symbols[getRandomInt(0, symbols.length - 1)];
+    var result = '';
+
+    if (!denySymbols)
+        result = symbols[getRandomInt(0, symbols.length - 1)];
+
     for (var i = str.length - 1; i >= 0; i--) {
         result += str[i];
     }
@@ -62,10 +68,12 @@ function getRandomSequence()
 
 /**
  * Возвращает псевдослучайное значение из массива words,
- * добавляя в конец возвращаемого значения псевдослучайный символ (из symbols массива)
+ * добавляя (если разрешено) в конец возвращаемого значения
+ * псевдослучайный символ (из symbols массива)
+ * @param {bool} denySymbols исключать ли символы из массива symbols
  * @returns {string}
  */
-function getRandomWord()
+function getRandomWord(denySymbols)
 {
     var word = words[getRandomInt(0, words.length - 1)];
     for (var i = 0; i < word.length; i++) {
@@ -74,16 +82,18 @@ function getRandomWord()
         }
     }
 
-    word += symbols[getRandomInt(0, symbols.length - 1)];
+    if (!denySymbols)
+        word += symbols[getRandomInt(0, symbols.length - 1)];
 
     return word;
 }
 
 /**
  * Возвращает сгенерированный пароль
+ * @param {bool} denySymbols исключать ли символы из массива symbols
  * @returns {string}
  */
-function generate()
+function generate(denySymbols)
 {
     var result = '';
     var haveWord = false;
@@ -103,7 +113,7 @@ function generate()
             case 0:
                 haveWord = true;
                 lastWasMirror = true;
-                last = getRandomWord();
+                last = getRandomWord(denySymbols);
                 break;
             case 1:
                 lastWasMirror = false;
@@ -116,7 +126,7 @@ function generate()
                 break;
             case 3:
                 lastWasMirror = true;
-                last = getMirror(last);
+                last = getMirror(last, denySymbols);
                 break;
         }
 

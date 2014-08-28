@@ -20,7 +20,7 @@
                     ><span class="fa fa-lightbulb-o bigicon"></span> Этот пароль легко запомнить!</a>
             <div class="control">
                 <input type="text" placeholder="" value="" id="passwordInput">
-                <button class="btn btn-default" id="moreButton">Ещё</button>
+                <button class="btn btn-default wide" id="moreButton">Ещё</button>
             </div>
         </div>
     </div>
@@ -28,11 +28,18 @@
         &copy; 2014 <a href="http://den.bz">www.den.bz</a>
     </div>
     <div class="footer right">
+        <div id="options">
+            <input type="checkbox" id="symbolsOption" value="1"> Без символов &laquo;-!&raquo;
+        </div>
+        <i class="fa fa-cog"></i> <a href="#" id="optionsLink">опции</a>
         <i class="fa fa-git-square"></i> <a href="https://github.com/maindefine/simplepassword.ru" target="_blank">исходники</a>
     </div>
+
     <script src="js/config.js"></script>
+    <script src="js/cookie.js"></script>
     <script src="js/functions.js"></script>
     <script src="js/actions.js"></script>
+
     <?php include(__DIR__.'/inc/counters.php'); ?>
 </body>
 </html>

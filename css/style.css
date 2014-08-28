@@ -85,14 +85,21 @@ body {
     padding: 10px;
     color: #fefefe;
     font-size: 2em;
-    background-color: #8EB7E4;
     width: 100%;
+}
+
+.wide {
+    background-color: #8EB7E4;
     -webkit-border-top-right-radius: 0;
     -webkit-border-bottom-right-radius: 0;
     -moz-border-radius-topright: 0;
     -moz-border-radius-bottomright: 0;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
+}
+
+.wide:hover {
+    color: #333 !important;
 }
 
 .footer {
@@ -116,5 +123,20 @@ body {
 
 .footer.right {
     left: 100%;
-    margin-left: -7.5em;
+    margin-left: -13em;
+}
+
+.footer i {
+    margin-left: .4em;
+}
+
+#options {
+    position: absolute;
+    margin-top: -4em;
+    margin-left: -2em;
+    width: 250px;
+    color: #fefefe;
+    padding: 1em;
+    background-color: #8EB7E4;
+    display: none;
 }
