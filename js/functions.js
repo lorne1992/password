@@ -25,7 +25,7 @@ function getRandomSyllable(noRepeat)
     if (!noRepeat) {
         result += result.toLowerCase();
     }
-    
+
     return result;
 }
 

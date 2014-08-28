@@ -5,7 +5,7 @@ function updatePasswordAtPage()
 {
     var password;
     do {
-        password = generate($('#symbolsOption').prop('checked'), $('#noRepeatSyllableOption').prop('checked'));
+        password = generate($('#noSymbolsOption').prop('checked'), $('#noRepeatSyllableOption').prop('checked'));
     } while (!isSafePassword(password));
 
     $('#passwordInput').val(password);
@@ -15,8 +15,8 @@ function updatePasswordAtPage()
 $(function() {
     updatePasswordAtPage();
     $('.row').fadeIn(400);
-    if (getCookie('symbols') == 1) {
-        $('#symbolsOption').prop('checked', true);
+    if (getCookie('no_symbols') == 1) {
+        $('#noSymbolsOption').prop('checked', true);
     }
     if (getCookie('no_repeat_syllable') == 1) {
         $('#noRepeatSyllableOption').prop('checked', true);
@@ -34,7 +34,7 @@ $('#moreButton').on('click', function() {
     return false;
 })
 
-$('#symbolsOption').on('change', function() {
+$('#noSymbolsOption').on('change', function() {
     setCookie('no_symbols', $(this).prop('checked') ? 1 : 0, 90, '/');
     return false;
 })
