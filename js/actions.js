@@ -15,7 +15,7 @@ function updatePasswordAtPage()
 $(function() {
     updatePasswordAtPage();
     $('.row').fadeIn(400);
-    if (getCookie('test') == 1) {
+    if (getCookie('symbols') == 1) {
         $('#symbolsOption').prop('checked', true);
     }
 })
@@ -32,7 +32,7 @@ $('#moreButton').on('click', function() {
 })
 
 $('#symbolsOption').on('change', function() {
-    setCookie('test', $(this).prop('checked') ? 1 : 0, 90, '/');
+    setCookie('symbols', $(this).prop('checked') ? 1 : 0, 90, '/');
     return false;
 })
 
