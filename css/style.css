@@ -12,7 +12,9 @@ body {
     top: 50%;
     margin-left: -20em;
     margin-top: -14em;
+    display: none;
 }
+
 .content {
     text-align: center;
     width: 40em;
