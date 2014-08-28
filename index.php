@@ -16,7 +16,7 @@
                     href="http://simplepassword.ru"
                     title="simplepassword.ru - генератор паролей, которые легко запомнить!"
                     id="header"
-                    ><span class="fa fa-lightbulb-o bigicon"></span> Легко запомнить!</a>
+                    ><span class="fa fa-lightbulb-o bigicon"></span> Этот пароль легко запомнить!</a>
             <div class="control">
                 <input type="text" placeholder="" value="" id="passwordInput">
                 <button class="btn btn-default" id="moreButton">Ещё</button>
