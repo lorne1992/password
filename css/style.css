@@ -1,0 +1,109 @@
+/*
+Uses https://dribbble.com/shots/917819-iPad-Calendar-Login?list=shots&sort=views&timeframe=ever&offset=461
+*/
+
+body {
+    background-color: #F0EEEE;
+}
+
+.row {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -20em;
+    margin-top: -14em;
+}
+.content {
+    text-align: center;
+    width: 40em;
+    border-radius: 0.5rem;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #fefefe;
+    padding: 20px;
+    height: 26em;
+}
+
+#passwordInput {
+    width: 100%;
+    margin-top: .7em;
+    margin-bottom: 17px;
+    padding: .2em .4em;
+    background-color: #ECF4F4;
+    border-radius: 2px;
+    border: none;
+    font-size: 4em;
+}
+
+@media (max-height: 614px) {
+    #map {
+        margin-top: 10px;
+    }
+    #footer {
+        position: relative;
+        top: auto;
+        left: auto;
+        margin-top: 1em;
+    }
+}
+@media (max-width: 614px) {
+    .row {
+        margin-left: -15em;
+        margin-top: -12em;
+    }
+    .content {
+        width: 30em;
+        height: 24em;
+    }
+    #passwordInput {
+        font-size: 3em;
+    }
+}
+
+.bigicon {
+    margin-left: -.3em;
+    font-size:97px;
+    color: #f96145;
+}
+
+#header, #header:hover {
+    color: #f96145;
+    font-size: 2em;
+    text-decoration: none;
+}
+
+#moreButton {
+    border-radius: 2px;
+    padding: 10px;
+    color: #fefefe;
+    font-size: 2em;
+    background-color: #8EB7E4;
+    width: 100%;
+    -webkit-border-top-right-radius: 0;
+    -webkit-border-bottom-right-radius: 0;
+    -moz-border-radius-topright: 0;
+    -moz-border-radius-bottomright: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+#footer {
+    position: absolute;
+    top: 100%;
+    margin-top: -2.5em;
+    margin-left: 1.5em;
+    font-size: 1.3em;
+    color: #555;
+}
+
+#footer a {
+    color: #555;
+    font-size: 1em;
+}
+
+#footer a:hover {
+    text-decoration: underline;
+    color: #333;
+}
