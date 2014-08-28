@@ -16,24 +16,22 @@ function getRandomInt(min, max)
 function getRandomSyllable()
 {
     var result = consonants[getRandomInt(0, consonants.length - 1)].toUpperCase();
-    result += vowels[getRandomInt(0, vowels.length - 1)];
+
+    //Т.к. y может быть как согласной буквой, так и гласной,
+    //то следует исключить генерацию слога Yy
+    result += vowels[getRandomInt(0, vowels.length - ((result.toLowerCase() == 'y') ? 2 : 1))];
 
     return result;
 }
 
 /**
- * Возвращает зеркальное отражение строки,
- * добавляя (если разрешено) перед этим псевдослучайный символ из массива symbols
+ * Возвращает зеркальное отражение строки
  * @param {string} str
- * @param {bool} denySymbols исключать ли символы из массива symbols
  * @returns {string}
  */
-function getMirror(str, denySymbols)
+function getMirror(str)
 {
     var result = '';
-
-    if (!denySymbols)
-        result = symbols[getRandomInt(0, symbols.length - 1)];
 
     for (var i = str.length - 1; i >= 0; i--) {
         result += str[i];
@@ -48,7 +46,7 @@ function getMirror(str, denySymbols)
 function getRandomSequence()
 {
     var result = '';
-    var length = getRandomInt(MIN_LENGTH_SEQUENCE, MAX_LENGTH_SEQUENCE);
+    var length = getRandomInt(MIN_SEQUENCE_LENGTH, MAX_SEQUENCE_LENGTH);
     var start, i;
 
     if (getRandomInt(0, 1) == 1) {
@@ -67,13 +65,10 @@ function getRandomSequence()
 }
 
 /**
- * Возвращает псевдослучайное значение из массива words,
- * добавляя (если разрешено) в конец возвращаемого значения
- * псевдослучайный символ (из symbols массива)
- * @param {bool} denySymbols исключать ли символы из массива symbols
+ * Возвращает псевдослучайное значение из массива words
  * @returns {string}
  */
-function getRandomWord(denySymbols)
+function getRandomWord()
 {
     var word = words[getRandomInt(0, words.length - 1)];
     for (var i = 0; i < word.length; i++) {
@@ -82,10 +77,28 @@ function getRandomWord(denySymbols)
         }
     }
 
-    if (!denySymbols)
-        word += symbols[getRandomInt(0, symbols.length - 1)];
-
     return word;
+}
+
+/**
+ * Возвращает разделитель из массива symbols (если разрешено) либо numbers
+ * @param {string} password текущий пароль
+ * @param {bool} denySymbols запретить ли использовать символы из массива symbols
+ * @returns {*}
+ */
+function getDivider(password, denySymbols)
+{
+    var last = password[password.length - 1];
+
+    if (
+        ( /\d/.test(last) || (getRandomInt(0, 1) == 1) )
+        &&
+        (!denySymbols)
+    ) {
+        return symbols[getRandomInt(0, symbols.length - 1)];
+    } else {
+        return numbers[getRandomInt(0, numbers.length - 1)];
+    }
 }
 
 /**
@@ -113,7 +126,7 @@ function generate(denySymbols)
             case 0:
                 haveWord = true;
                 lastWasMirror = true;
-                last = getRandomWord(denySymbols);
+                last = getRandomWord();
                 break;
             case 1:
                 lastWasMirror = false;
@@ -126,11 +139,23 @@ function generate(denySymbols)
                 break;
             case 3:
                 lastWasMirror = true;
-                last = getMirror(last, denySymbols);
+                last = getMirror(last);
                 break;
         }
 
         result += last;
+
+        result += getDivider(result, denySymbols);
     }
     return result;
+}
+
+/**
+ * Проверяет, можно ли считать в некоторых комбинациях пароль достаточно безопасным
+ * @param {string} password
+ * @returns {boolean}
+ */
+function isSafePassword(password)
+{
+    return (/\d/.test(password)) && (/[A-Za-z]/.test(password));
 }

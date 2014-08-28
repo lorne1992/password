@@ -6,7 +6,7 @@ function updatePasswordAtPage()
     var password;
     do {
         password = generate($('#symbolsOption').prop('checked'));
-    } while ($.isNumeric(password));
+    } while (!isSafePassword(password));
 
     $('#passwordInput').val(password);
     $('#passwordInput').fadeIn(400);
