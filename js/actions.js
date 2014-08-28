@@ -12,7 +12,6 @@ function updatePasswordAtPage()
     $('#passwordInput').fadeIn(400);
 }
 
-
 $(function() {
     updatePasswordAtPage();
     $('.row').fadeIn(400);
