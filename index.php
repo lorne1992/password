@@ -2,12 +2,21 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title>Генератор паролей, которые легко запомнить!</title>
+    <title>simplepassword.ru - пароль может быть простым и безопасным</title>
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="image_src" href="http://simplepassword.ru/pic.png" />
+    <meta property="og:image" content="http://simplepassword.ru/pic.png" />
+    <meta property="og:title" content="simplepassword.ru - пароль может быть простым и безопасным" />
+    <meta name="description" content="Генератор достаточно безопасных паролей, которые легко запомнить" />
+    <meta property="og:description" content="Генератор достаточно безопасных паролей, которые легко запомнить" />
+
     <link href='http://fonts.googleapis.com/css?family=PT+Sans+Caption' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css" />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
+
     <script src="js/jquery-1.11.1.min.js"></script>
 </head>
 <body>
