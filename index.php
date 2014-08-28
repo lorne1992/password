@@ -27,6 +27,14 @@
     <div class="footer left">
         &copy; 2014 <a href="http://den.bz/program/generator-zapominayushhikhsya-parolejj.html">www.den.bz</a>
     </div>
+    <div class="footer center">
+        <script type="text/javascript" src="//yandex.st/share/share.js"
+                charset="utf-8"></script>
+        <div class="yashare-auto-init" data-yashareL10n="ru"
+             data-yashareType="button" data-yashareQuickServices="vkontakte,facebook,twitter,odnoklassniki,moimir"
+
+            ></div>
+    </div>
     <div class="footer right">
         <div id="options">
             <input type="checkbox" id="symbolsOption" value="1"> Без символов &laquo;-_!&raquo;

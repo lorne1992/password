@@ -76,6 +76,12 @@ body {
     margin-left: -13em;
 }
 
+.footer.center {
+    left: 50%;
+    margin-left: -7.5em;
+    margin-top: -2.7em;
+}
+
 .footer i {
     margin-left: .4em;
 }
@@ -119,6 +125,12 @@ body {
     }
     #options {
         margin-left: 0;
+    }
+}
+
+@media (max-width: 825px) {
+    .footer.center {
+        display: none;
     }
 }
 
