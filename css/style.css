@@ -104,7 +104,7 @@ body {
     #passwordInput {
         font-size: 2em;
     }
-    #header {
+    #header, #header:hover {
         font-size: 1.2em;
     }
     .bigicon {
