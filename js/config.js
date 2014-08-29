@@ -11,6 +11,6 @@ var words = [
 ];
 var symbols = ['!', '-', '_'];
 
-const MIN_SEQUENCE_LENGTH = 4;
-const MAX_SEQUENCE_LENGTH = 5;
+const MIN_SEQUENCE_LENGTH = 3;
+const MAX_SEQUENCE_LENGTH = 4;
 const MAX_SYLLABLE = 1;
