@@ -78,8 +78,9 @@ body {
 
 .footer.center {
     left: 50%;
-    margin-left: -7.5em;
-    margin-top: -2.7em;
+    margin-left: -8.5em;
+    margin-top: -3.5em;
+    font-size: 1em;
 }
 
 .footer i {
