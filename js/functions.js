@@ -110,8 +110,9 @@ function getDivider(password, denySymbols)
  * Возвращает сгенерированный пароль
  * @param {bool} denySymbols исключать ли символы из массива symbols
  * @param {bool} noRepeatSyllable отключить ли повтор слогов
+ * @param {bool} noWords отключить ли использование словарных слов
  * @returns {string}
- */function generate(denySymbols, noRepeatSyllable)
+ */function generate(denySymbols, noRepeatSyllable, noWords)
 {
     var result = '';
     var haveWord = false;
@@ -121,7 +122,7 @@ function getDivider(password, denySymbols)
     var syllableCount = 0;
 
     while (result.length < 8) {
-        if (!haveWord) {
+        if (!haveWord && !noWords) {
             rand = getRandomInt(0, (result.length == 0) ? 2 : (lastWasMirror) ? 2 : 3);
         } else {
             rand = getRandomInt(1, (result.length == 0) ? 2 : (lastWasMirror) ? 2 : 3);

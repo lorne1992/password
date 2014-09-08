@@ -89,7 +89,7 @@ body {
 
 #options {
     position: absolute;
-    margin-top: -5em;
+    margin-top: -6.5em;
     margin-left: -2em;
     width: 250px;
     color: #fefefe;
@@ -98,6 +98,15 @@ body {
     display: none;
 }
 
+#updates {
+    position: absolute;
+    font-size: .7em;
+    margin-left: -.8em;
+    margin-top: -.5em;
+    color: #f96145;
+    font-weight: bold;
+    display: none;
+}
 
 @media (max-width: 614px) {
     .row {

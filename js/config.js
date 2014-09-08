@@ -14,3 +14,4 @@ var symbols = ['!', '-', '_'];
 const MIN_SEQUENCE_LENGTH = 3;
 const MAX_SEQUENCE_LENGTH = 4;
 const MAX_SYLLABLE = 1;
+const LAST_UPDATE_COOKIE_NAME = 'updates_08.09.2014';

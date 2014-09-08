@@ -10,16 +10,16 @@ function getCookie( name ) {
     return unescape( document.cookie.substring( len, end ) );
 }
 
-function setCookie( name, value, expires, path, domain, secure ) {
+function setCookie(name, value) {
+    var expires = 90;
+    var path = '/';
     var today = new Date();
     today.setTime( today.getTime() );
-    if ( expires ) {
-        expires = expires * 1000 * 60 * 60 * 24;
-    }
+
+    expires = expires * 1000 * 60 * 60 * 24;
+
     var expires_date = new Date( today.getTime() + (expires) );
     document.cookie = name+'='+escape( value ) +
         ( ( expires ) ? ';expires='+expires_date.toGMTString() : '' ) +
-        ( ( path ) ? ';path=' + path : '' ) +
-        ( ( domain ) ? ';domain=' + domain : '' ) +
-        ( ( secure ) ? ';secure' : '' );
+        ( ( path ) ? ';path=' + path : '' );
 }
