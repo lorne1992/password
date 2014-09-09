@@ -17,8 +17,6 @@ function updatePasswordAtPage()
 }
 
 $(function() {
-    updatePasswordAtPage();
-    $('.row').fadeIn(400);
     if (getCookie('no_symbols') == 1) {
         $('#noSymbolsOption').prop('checked', true);
     }
@@ -31,6 +29,9 @@ $(function() {
     if (getCookie(LAST_UPDATE_COOKIE_NAME) != 1) {
         $('#updates').fadeIn(1000);
     }
+
+    updatePasswordAtPage();
+    $('.row').fadeIn(400);
 })
 
 $('#moreButton').on('click', function() {
