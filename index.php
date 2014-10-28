@@ -34,7 +34,7 @@
         </div>
     </div>
     <div class="footer left">
-        &copy; 2014 <a href="http://den.bz/program/generator-zapominayushhikhsya-parolejj.html">www.den.bz</a>
+        &copy; 2014 <a href="http://den.bz/project/generator-zapominayushhikhsya-parolejj.html">www.den.bz</a>
     </div>
     <div class="footer center">
         <script type="text/javascript" src="//yandex.st/share/share.js"
