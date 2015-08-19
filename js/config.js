@@ -7,7 +7,9 @@ var vowels = ['a', 'e', 'i', 'u', 'y']; //y должен быть последн
 var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 var words = [
     'the', 'and', 'look', 'head', 'room', 'door', 'one', 'two', 'time',
-    'body', 'over', 'code', 'more', 'some'
+    'body', 'over', 'code', 'more', 'some', 'become', 'begin', 'done',
+    'draw', 'eat', 'feel', 'fly', 'grow', 'hold', 'keep', 'learn',
+    'make', 'read', 'set', 'sleep', 'take'
 ];
 var symbols = ['!', '-', '_'];
 

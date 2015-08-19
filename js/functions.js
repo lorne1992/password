@@ -96,7 +96,7 @@ function getDivider(password, denySymbols)
     var last = password[password.length - 1];
 
     if (
-        ( /\d/.test(last) || (getRandomInt(0, 1) == 1) )
+        ( /\d/.test(last) || (getRandomInt(0, 10) > 2) )
         &&
         (!denySymbols)
     ) {
