@@ -26,6 +26,7 @@
                     href="http://den.bz/password"
                     title="den.bz/password — генератор паролей, которые легко запомнить!"
                     id="header"
+                    target="_blank"
                     ><span class="fa fa-lightbulb-o bigicon"></span> Этот пароль легко запомнить!</a>
             <div class="control">
                 <input type="text" placeholder="" value="" id="passwordInput">
