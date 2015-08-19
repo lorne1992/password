@@ -7,6 +7,7 @@ function getCookie( name ) {
     if ( start == -1 ) return null;
     var end = document.cookie.indexOf( ';', len );
     if ( end == -1 ) end = document.cookie.length;
+    //TODO: unescape deprecated
     return unescape( document.cookie.substring( len, end ) );
 }
 
@@ -19,6 +20,7 @@ function setCookie(name, value) {
     expires = expires * 1000 * 60 * 60 * 24;
 
     var expires_date = new Date( today.getTime() + (expires) );
+    //TODO: escape deprecated
     document.cookie = name+'='+escape( value ) +
         ( ( expires ) ? ';expires='+expires_date.toGMTString() : '' ) +
         ( ( path ) ? ';path=' + path : '' );

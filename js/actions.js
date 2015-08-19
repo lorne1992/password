@@ -32,7 +32,7 @@ $(function() {
 
     updatePasswordAtPage();
     $('.row').fadeIn(400);
-})
+});
 
 $('#moreButton').on('click', function() {
     if ($('#options').is(':visible'))
@@ -43,22 +43,22 @@ $('#moreButton').on('click', function() {
     });
 
     return false;
-})
+});
 
 $('#noSymbolsOption').on('change', function() {
     setCookie('no_symbols', $(this).prop('checked') ? 1 : 0);
     return false;
-})
+});
 
 $('#noRepeatSyllableOption').on('change', function() {
     setCookie('no_repeat_syllable', $(this).prop('checked') ? 1 : 0);
     return false;
-})
+});
 
 $('#noWords').on('change', function() {
     setCookie('no_words', $(this).prop('checked') ? 1 : 0);
     return false;
-})
+});
 
 $('#optionsLink').on('click', function() {
     if ($('#options').is(':visible'))
@@ -70,4 +70,4 @@ $('#optionsLink').on('click', function() {
         $('#updates').fadeOut(1000);
     }
     return false;
-})
+});
