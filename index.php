@@ -2,13 +2,13 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title>den.bz/password — пароль может быть простым и безопасным</title>
+    <title>ahrameev.ru/password — пароль может быть простым и безопасным</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="image_src" href="http://den.bz/password-project/pic.png" />
-    <meta property="og:image" content="http://den.bz/password-project/pic.png" />
-    <meta property="og:title" content="den.bz/password — пароль может быть простым и безопасным" />
+    <link rel="image_src" href="http://ahrameev.ru/password-project/pic.png" />
+    <meta property="og:image" content="http://ahrameev.ru/password-project/pic.png" />
+    <meta property="og:title" content="ahrameev.ru/password — пароль может быть простым и безопасным" />
     <meta name="description" content="Генератор достаточно безопасных паролей, которые легко запомнить" />
     <meta property="og:description" content="Генератор достаточно безопасных паролей, которые легко запомнить" />
 
@@ -23,8 +23,8 @@
     <div class="row">
         <div class="content">
             <a
-                    href="http://den.bz/password"
-                    title="den.bz/password — генератор паролей, которые легко запомнить!"
+                    href="http://ahrameev.ru/password"
+                    title="ahrameev.ru/password — генератор паролей, которые легко запомнить!"
                     id="header"
                     target="_blank"
                     ><span class="fa fa-lightbulb-o bigicon"></span> Этот пароль легко запомнить!</a>
@@ -37,7 +37,7 @@
     <div class="footer left">
         <script>
             if (window == top) {
-                document.write('&copy; 2014 <a href="http://den.bz/password">den.bz/password</a>');
+                document.write('&copy; 2014 <a href="http://ahrameev.ru/password">ahrameev.ru/password</a>');
             }
         </script>
     </div>
